@@ -169,8 +169,8 @@ module.exports = {
             usernames and passwords in the users array or active users_from_db using users_api_endpoint for check.
             When oidc.enabled is utilized alongside host protection, the authenticated user will be recognized as valid.
         */
-        protected: false,
-        user_auth: false,
+        protected: true,
+        user_auth: true,
         users_from_db: false, // if true ensure that api.token is also set to true.
         users_api_endpoint: 'http://localhost:9000/api/v1/user/isAuth',
         users_api_room_allowed: 'http://localhost:9000/api/v1/user/isRoomAllowed',
@@ -204,8 +204,8 @@ module.exports = {
                 By default, the presenter is identified as the first participant to join the room, distinguished by their username and UUID. 
                 Additional layers can be added to specify valid presenters and co-presenters by setting designated usernames.
             */
-            'Miroslav Pejic',
-            'miroslav.pejic.85@gmail.com',
+            'User',
+            'user@gmail.com',
         ],
         join_first: true, // Set to true for traditional behavior, false to prioritize presenters
     },
@@ -306,8 +306,8 @@ module.exports = {
             Upon leaving the room, users who either opt out of providing feedback or if the survey is disabled 
             will be redirected to a specified URL. If enabled false the default '/newroom' URL will be used.
         */
-        enabled: false,
-        url: '',
+        enabled: true,
+        url: 'https://taureansurgical.com/site',
     },
     ui: {
         /*
@@ -315,29 +315,29 @@ module.exports = {
         */
         brand: {
             app: {
-                name: 'MiroTalk SFU',
-                title: 'MiroTalk SFU<br />Free browser based Real-time video calls.<br />Simple, Secure, Fast.',
+                name: 'Taurean Surgical',
+                title: 'Taurean Surgical<br />Taurean Surgical Video meeting and streaming server<br />',
                 description:
-                    'Start your next video call with a single click. No download, plug-in, or login is required. Just get straight to talking, messaging, and sharing your screen.',
+                    'Taurean Surgical Video meeting and streaming server',
             },
             site: {
-                title: 'MiroTalk SFU, Free Video Calls, Messaging and Screen Sharing',
+                title: 'Taurean Surgical Video meeting and streaming server',
                 icon: '../images/logo.svg',
                 appleTouchIcon: '../images/logo.svg',
             },
             meta: {
                 description:
-                    'MiroTalk SFU powered by WebRTC and mediasoup, Real-time Simple Secure Fast video calls, messaging and screen sharing capabilities in the browser.',
+                    'Taurean Surgical Video meeting and streaming server.',
                 keywords:
-                    'webrtc, miro, mediasoup, mediasoup-client, self hosted, voip, sip, real-time communications, chat, messaging, meet, webrtc stun, webrtc turn, webrtc p2p, webrtc sfu, video meeting, video chat, video conference, multi video chat, multi video conference, peer to peer, p2p, sfu, rtc, alternative to, zoom, microsoft teams, google meet, jitsi, meeting',
+                    'taurean surgical, meeting',
             },
             og: {
                 type: 'app-webrtc',
-                siteName: 'MiroTalk SFU',
+                siteName: 'Taurean Surgical',
                 title: 'Click the link to make a call.',
-                description: 'MiroTalk SFU calling provides real-time video calls, messaging and screen sharing.',
-                image: 'https://sfu.mirotalk.com/images/mirotalksfu.png',
-                url: 'https://sfu.mirotalk.com',
+                description: 'Taurean Surgical Video meeting and streaming server.',
+                image: '',
+                url: 'https://taureansurgical.com/site',
             },
             html: {
                 features: true,
@@ -455,9 +455,9 @@ module.exports = {
             Umami: https://github.com/umami-software/umami
             We use our Self-hosted Umami to track aggregated usage statistics in order to improve our service.
         */
-        enabled: true,
-        src: 'https://stats.mirotalk.com/script.js',
-        id: '41d26670-f275-45bb-af82-3ce91fe57756',
+        enabled: false,
+        src: '',
+        id: '',
     },
     mediasoup: {
         // Worker settings
